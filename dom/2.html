@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        async function calculateInterest(){
+            const a=document.getElementById("p").value;
+            const b=document.getElementById("r").value;
+            const c=document.getElementById("t").value;
+            const response=await fetch("https://sum-server.100xdevs.com/interest?principal=" + a + "&rate=" + b + "&time=" + c);
+            const ans=await response.text();
+            
+            const ans2=ans.stringify();
+            document.getElementById("button").innerHTML=ans2;
+        }
+
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="p" type="text" placeholder="principal" />
+    <input  id="r" type="text" placeholder="rate" />
+    <input  id="t" type="text" placeholder="time" />
+    <p>// also a function named oninput="function name"
+        //debouncing means not sending requests and sending request at some time
+        like when the user is not typing something and 
+        function debouncePopulatediv()so like this function has to call populateDiv() if its not called for 100ms
+        let timeout;
+        {
+            clearTimeout(timeout);
+            cont timeout=setTimeout{populateDiv,100};
+          
+        
+        }</p>
+    <button id="button" onclick="calculateInterest()">Interest</button>
+
+    
+</body>
+</html>
+// also a function named oninput="function name"
+//debouncing means not sending requests and sending request at some time
+like when the user is not typing something and 
+function debouncePopulatediv()so like this function has to call populateDiv() if its not called for 100ms
+let timeout;
+{
+    clearTimeout(timeout);
+    cont timeout=setTimeout{populateDiv,100};
+  
+
+}

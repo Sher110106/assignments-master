@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function addTodo(){
+            const title=document.getElementById("title").value;
+
+            //document.createElement
+            const description=document.getElementById("description").value;
+            const   childDiv=document.createElement("div");
+            childDiv.innerHTML=title;
+            
+
+//` ` i can use this for multi line strings so could i have done this by <div>
+
+            
+}
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="title" type="text" placeholder="title"/>
+    <br></br>
+
+    <input id="description" type="text" placeholder="description"/>
+    <br></br>
+    <button>add todo</button>
+    <div id="container">
+        <div>
+            <div>
+                <h1>title of todo 1</h1>
+            
+            </div>
+            <div>
+                <p>description of todo 1</p>
+                </div>
+                <button>Mark as done</button>
+
+        </div>
+
+    </div>
+</body>
+</html>

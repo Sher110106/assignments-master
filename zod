@@ -1,0 +1,22 @@
+const zod=require("zod");
+const schema=zod.array(zod.number());
+const response=schema.safeParse(kidneys);
+if(!response.success){
+    res.status(411).json({
+        "msg":"edd" 
+    })
+}
+response.send({
+    response
+})
+
+//email:string=>email
+//password:string=>password 8 letters
+//country in or us
+const schema1=zod.object({
+    email:zod.string().email(),
+    
+    password:zod.string().min(8),
+    country:zod.literal("IN").or(zod.literal("US"))
+
+})
